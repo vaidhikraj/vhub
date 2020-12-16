@@ -1,0 +1,402 @@
+body{
+    margin: 0px;
+  
+    background-color: #f4f4f4;
+
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar{
+    z-index:1;
+    width:100%;
+    display:flex;
+    height:10vh;
+    align-items: center;
+    justify-content:space-around;
+    background-color:#527a7a;
+    position:sticky;
+    top:0;
+}
+.navbar_heading img{
+height: 50x;
+width: 150px;    
+}
+.navitems ul{
+   width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navitems ul li{
+    list-style-type:none;
+    padding: 0px 20px;
+    align-items: center;
+}
+.navitems ul li a{
+    color:whitesmoke;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/*signup page*/
+
+.signup_page{
+    display: flex;
+    margin: 14%;
+}
+.signup_info{
+    display:block;
+    width: 50%;
+}
+.signup_box{
+    width: 40%;
+    margin:-5% 3%;
+    
+}
+.box{
+    box-shadow: 2px 2px 2px 3px rgb(0,0,0,0.2);
+background-color: #ddd;
+  width: 350px;
+  border: 2px solid #ddd;
+  padding: 50px;
+  margin: 3px;
+  height: 70%;
+  border-radius: 10px;
+}
+
+.box input{
+    border-radius:8px;
+    border: 1px solid #ddd;
+    padding: 12px;
+    width:96%;
+}
+.btn{
+    background-color: #527a7a;
+    width:100%;
+    color:whitesmoke;
+}
+span{
+    animation: title 500ms ease-in;
+    animation-duration: 1s;
+    width: 100%;
+}
+.signup_info h3{
+    animation: title 500ms ease-in;
+    
+    animation-duration: 1s;
+}
+@keyframes title{
+    from{
+        opacity: 0;
+        transform:translateX(-30%); 
+    }
+    to{
+        opacity: 1;
+        transform:translateX(0%);
+        
+    }
+}
+
+.para{
+    padding-left: 60px;
+}
+
+
+/* after authentication */
+
+
+.home_content{
+    margin:18% 24%;
+    text-align: center;
+}
+.home_content .btn_home{
+   
+    padding: 12px;
+    border:none;
+    border-radius:8px;
+    background-color:#1877f2 ;
+    width:14%;
+    color:whitesmoke;
+}
+
+/*blog */
+.blog_form{
+    margin: 3% 32%;
+
+}
+#id_title{
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 76%;
+}
+
+label{
+    font-size: 18px;
+}
+label[for=id_content]
+{
+    margin-top: 2%;
+}
+#id_content{
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 82%;
+    height: 80%;
+    margin: 2%;
+}
+
+#id_foto{
+    font-size: 15px;
+    padding: 8px;
+    padding-right: 7px;
+}
+.blog_btn{
+    background-color: #1877f2;
+    width:22%;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    color:whitesmoke;
+}
+h2{
+    color:#f3f3f3;
+}
+
+#news{
+    color:white;
+    align-items: center;
+    font-size: 40px;
+}
+.index_body{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.card{
+    background-color: #f3f3f3;
+    box-shadow: 5px 5px 5px 5px rgb(0,0,0,0.2);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+}
+
+.card_header{
+    background-color:#f4f4f4;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.header_data h1{
+    text-transform:capitalize;
+}
+.myblog_btn1{
+    background-color: #1877f2;
+    width:8%;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    color:whitesmoke;
+    
+}
+.myblog_form{
+    position: absolute;
+    background-color:red;
+    width: fit-content;
+    
+}
+.index_bt{
+    
+    width: 100%;
+    display:flex;
+    justify-content: right;
+    height: 100%;
+    align-items: center;
+}
+.myblog_btn2{
+    
+    cursor: pointer;
+    background-color: #527a7a;
+    width:10%;
+    height: 60%;
+    border: none;
+    border-radius: 8px;
+    color:whitesmoke;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+.myblog_btn2 a{
+text-decoration: none;
+color: whitesmoke;
+}
+.myblog_btn1 a{
+    text-decoration: none;
+    color: whitesmoke;
+    }
+hr{
+    color:#527a7a;
+    width: 100%;
+}
+.header_data{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+.card_header i{
+    margin:0px 20px;
+}
+
+.header_date{
+    margin:0px 20px;
+    
+    font-size: 0.4rem;
+}
+.card_body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.card_body img{
+    height: 50%;
+    width:50%;
+}
+.bb{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.viewblog{
+    margin: 2% 32%;
+    width: 50%;
+  
+}
+.viewblog #id_title{
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 60%;
+}
+
+
+.viewblog #id_content{
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 82%;
+    height: 80%;
+    margin: 3%;
+}
+
+.viewblog #id_foto{
+    font-size: 15px;
+    padding: 8px;
+    padding-right: 7px;
+}
+.viewblog_btn{
+    background-color: #1877f2;
+    width:10%;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    color:whitesmoke;
+}
+/*status*/
+#status_table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    
+  }
+  
+  #status_table td, #status_table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #status_table tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #status_table tr:hover {background-color: #ddd;}
+  
+  #status_table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color:  #336699;
+    color: white;
+  }
+  .table_btn{
+      margin-left: 35%;
+      width: 30%;
+      padding: 8px;
+      border: none;
+      border-radius: 8px;
+      background-color:rgb(218, 35, 35);
+  }
+  .table_btn a{
+      text-decoration: none;
+      color: whitesmoke;
+  }
+
+
+
+
+  /* Dropdown Button */
+.dropbtn {
+    background-color: #f4f4f4;
+    color:#527a7a;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    width: 160px;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color:rgb(0,0,0,0.3); color:#f4f4f4}

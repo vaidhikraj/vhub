@@ -1,0 +1,17 @@
+{% extends "tempfirst/base.html" %}
+
+{% block content %}
+
+
+
+<form method="POST" enctype="multipart/form-data">
+    {%csrf_token%}
+    <div class="viewblog">
+    {{form.as_p}}
+    <input type="submit" value="save" class="viewblog_btn">
+</div>
+    
+
+</form>
+
+{%endblock%}

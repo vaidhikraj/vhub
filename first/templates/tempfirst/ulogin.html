@@ -1,0 +1,32 @@
+{% extends "tempfirst/base.html" %}
+
+{% block content%}
+
+<form method='POST'>
+    {%csrf_token%}
+
+<div class="signup_page">
+    <div class="signup_info">
+        <h1><span style="color:#527a7a;font-size:100px;">Oblique</span></h1>
+        <h3>Blog helps to Connect with Things<br>with nature & society</h3>
+
+    </div>
+    <div class="signup_box">
+        <div class="box">
+            <input type="text" name="username" placeholder="UserName">
+        <br>
+            <br>
+            <input type="password" name="password" placeholder="Enter Password">
+            <br>
+            <br>
+            <input type="submit" class="btn" value="Login">
+
+            <br>
+            <p class="para">Not have an account?<span style="color:#1877f2"><a href="/signup">SignUp</a></span></p>
+        </div>
+    </div>
+</div>
+</form>
+
+
+{%endblock%}

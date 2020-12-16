@@ -1,0 +1,27 @@
+{% extends "tempfirst/base.html" %}
+
+{%load humanize %}
+
+{% block content%}
+
+
+<table id="status_table">
+    <thead>
+        <th>Title</th>
+        <th>Created</th>
+        <th>Delete</th>
+    </thead>
+    <tbody>
+        {%for i in data%}
+        <tr>
+            <td>{{i.title}}</td>
+            <td>{{i.today|naturaltime}}</td>
+            <td><button class="table_btn"><a href="{% url 'delete' i.id %}">Delete</a></button></td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+
+
+{%endblock%}
+
