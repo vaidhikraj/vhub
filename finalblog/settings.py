@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^qoj4&7mkv=4s4ynye)l%_ncqm%w6j6925$=(=b#al&7!x+@+#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['vardhamanhub.herokuapp.com','*']
 
 
 # Application definition
@@ -54,11 +54,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:8000",
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://127.0.0.1:8000","*",
+# ]
 
 ROOT_URLCONF = 'finalblog.urls'
 
@@ -146,3 +147,5 @@ MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
