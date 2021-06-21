@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^qoj4&7mkv=4s4ynye)l%_ncqm%w6j6925$=(=b#al&7!x+@+#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['vardhamanhub.herokuapp.com','*']
 
@@ -149,5 +149,3 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
