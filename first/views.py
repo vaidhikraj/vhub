@@ -45,8 +45,9 @@ def ulogin(request):
 
 @login_required(login_url="ulogin")
 def home(request):
-    a=BlogTable.objects.filter(public=True).order_by('-today')
-    return render(request,'tempfirst/home.html',{'data':a,'post':post})
+    if request.method=='GET':
+        a=BlogTable.objects.filter(public=True).order_by('-today')
+        return render(request,'tempfirst/home.html',{'data':a,'post':post})
 
 @login_required(login_url="ulogin")
 def blog(request):
