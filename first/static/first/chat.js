@@ -46,7 +46,7 @@ function sendButton(){
         ubox.appendChild(up)
         container.appendChild(ubox)
 
-        fetch('http://localhost:8000/simple_chatbot/', {
+        fetch('https://www.vardhamanhub.herokuapp.com/simple_chatbot/', {
         method: 'POST', 
         headers: {
             'Content-Type': 'application/json',
