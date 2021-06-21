@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'finalblog',
     'first',
+    'simple_chatbot',
+     'corsheaders',
+     'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +53,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:8000",
 ]
 
 ROOT_URLCONF = 'finalblog.urls'
@@ -84,6 +92,14 @@ DATABASES = {
 }
 
 
+SIMPLE_CHATBOT = {
+    'responses': (
+        ("first.response.GreetingResponse", "Greeting"),
+        ("first.response.GoodbyeResponse", "Goodbye"),
+        ("first.response.NaistamResponse", "Naistam"),
+    ),
+}
+
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -116,6 +132,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+CORS_ALLOW_ALL_ORIGINS=True
 
 
 

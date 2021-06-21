@@ -28,6 +28,9 @@ def signup(request):
             
     return render(request,'tempfirst/signup.html',{'post':post})
 
+def botist(request):
+    return render(request,'tempfirst/botist.html')
+
 def ulogin(request):
     if request.method=='POST':
         a=authenticate(request,username=request.POST['username'],password=request.POST['password'])
@@ -49,9 +52,11 @@ def home(request):
 def blog(request):
     if request.method=='POST':
         a=BlogForm(request.POST,request.FILES)
+        
         b=a.save(commit=False)
         b.user=request.user
         b.save()
+        print(b.foto.url)
         return redirect('home')
         
     return render(request,'tempfirst/blog.html',{'form':BlogForm(),'post':post})

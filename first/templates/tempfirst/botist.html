@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="chats" method="POST" onSubmit="chat()">
+        {%csrf_token%}
+        <input type="text" name="message">
+        <input type="submit" value="send">
+        <div class="chatbox">
+
+        </div>
+    </form>
+    <script>
+        function chat(){
+        event.preventDefault()
+        box=document.querySelector('.chatbox')
+        li=document.createElement('li')
+        var message=document.chats.message.value
+        document.chats.message.value=""
+        const data = { message: String(message) };
+        var k=document.createElement('li')
+        k.appendChild(document.createTextNode(message))
+        box.appendChild(k)
+
+        fetch('http://localhost:8000/simple_chatbot/', {
+        method: 'POST', 
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+        })
+        .then(response =>response.json())
+        .then((result)=>{
+        li.appendChild(document.createTextNode(result.message))
+        box.appendChild(li)
+        message=''
+        })
+        .catch((error) => {
+        li.appendChild(document.createTextNode("sorry try again later"))
+        box.appendChild(li)
+        message=''
+        });
+    }
+    </script>
+</body>
+</html>

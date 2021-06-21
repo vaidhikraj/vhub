@@ -7,6 +7,7 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet"  href="{% static 'first/stylecss.css' %}">
+    <link rel="stylesheet"  href="{% static 'first/chat.css' %}">
     <script src="https://use.fontawesome.com/e66f4b389f.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Dancing+Script&family=Nunito:ital,wght@1,300&family=Peddana&display=swap" rel="stylesheet">
     <!--scriptlinks for status page-->
@@ -15,7 +16,7 @@
 <body>
     <nav class="navbar">
         <div class="navbar_heading">
-            <img src="../static/first/logo.jpg" alt="oblique">
+            <img src="../static/first/logo.png" alt="VHUB">
         </div>
         <div class="navitems">
         <ul>
@@ -47,8 +48,54 @@
         </ul>
     </div>
     </nav>
-
     {%block content%}{% endblock %}
 
+    
+<div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">Chat with us!
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+
+        <div class="content">
+            <div class="full-chat-block">
+                <!-- Message Container -->
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <!-- Messages -->
+                    <div class="chatwrap">
+                        <div id="chatbox">
+                            <p id="botStarterMessage" class="botText"><span>Enter your Query</span></p>
+                        </div>
+                    </div>
+                        <!-- User input box -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                            <form name="chats">
+                                <input id="textInput" class="input-box" type="text" name="message"
+                                    placeholder="Tap 'Enter' to send a message">
+                                <p></p>
+                            </form>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                
+                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                    onclick="sendButton()"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+<script src="{% static 'first/chat.js' %}"></script>
 </body>
 </html>
